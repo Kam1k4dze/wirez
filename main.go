@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/v-byte-cpu/wirez/command"
+	"github.com/Kam1k4dze/wirez/command"
 )
 
 // will be injected during release

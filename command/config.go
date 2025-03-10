@@ -10,9 +10,9 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/Kam1k4dze/wirez/pkg/connect"
 	"github.com/rs/zerolog"
 	"github.com/spf13/pflag"
-	"github.com/v-byte-cpu/wirez/pkg/connect"
 )
 
 func parseProxyFile(proxyFile io.Reader) (socksAddrs []*connect.SocksAddr, err error) {

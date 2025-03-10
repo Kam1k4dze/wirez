@@ -1,8 +1,8 @@
 # wirez
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/v-byte-cpu/wirez/blob/main/LICENSE)
-[![Build Status](https://cloud.drone.io/api/badges/v-byte-cpu/wirez/status.svg)](https://cloud.drone.io/v-byte-cpu/wirez)
-[![GoReportCard Status](https://goreportcard.com/badge/github.com/v-byte-cpu/wirez)](https://goreportcard.com/report/github.com/v-byte-cpu/wirez)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Kam1k4dze/wirez/blob/main/LICENSE)
+[![Build Status](https://cloud.drone.io/api/badges/Kam1k4dze/wirez/status.svg)](https://cloud.drone.io/Kam1k4dze/wirez)
+[![GoReportCard Status](https://goreportcard.com/badge/github.com/Kam1k4dze/wirez)](https://goreportcard.com/report/github.com/Kam1k4dze/wirez)
 
 **wirez** can redirect all TCP/UDP traffic made by **any** given program (application, script, shell, etc.) to SOCKS5 proxy
 and block other IP traffic (ICMP, SCTP etc).
@@ -156,4 +156,4 @@ and, finally, start a target process specified in cli args. That's it!
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/v-byte-cpu/wirez/blob/main/LICENSE) file for the full license text.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Kam1k4dze/wirez/blob/main/LICENSE) file for the full license text.
