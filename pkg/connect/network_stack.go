@@ -133,22 +133,25 @@ func (s *NetworkStack) setTCPHandler() {
 }
 
 func (s *NetworkStack) setUDPHandler() {
-	udpForwarder := udp.NewForwarder(s.Stack, func(r *udp.ForwarderRequest) {
+	udpForwarder := udp.NewForwarder(s.Stack, func(r *udp.ForwarderRequest) bool {
 		var wq waiter.Queue
 		id := r.ID()
 		s.log.Debug().Str("handler", "udp").
 			Stringer("localAddress", id.LocalAddress).Uint16("localPort", id.LocalPort).
 			Stringer("fromAddress", id.RemoteAddress).Uint16("fromPort", id.RemotePort).Msg("received request")
+
 		ep, err := r.CreateEndpoint(&wq)
 		if err != nil {
 			s.log.Error().Str("handler", "udp").Stringer("error", err).Msg("")
-			return
+			return false
 		}
+
 		go func() {
 			if err := s.handleUDP(gonet.NewUDPConn(&wq, ep), &id); err != nil {
 				s.log.Error().Str("handler", "udp").Err(err).Msg("")
 			}
 		}()
+		return true
 	})
 	s.SetTransportProtocolHandler(udp.ProtocolNumber, udpForwarder.HandlePacket)
 }
